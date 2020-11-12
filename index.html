@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="./script.js"></script>
+  <link rel="stylesheet" href="./styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="./logo.svg" alt="logo">
+    <div class="box">
+      <h1>Lâmpada</h1>
+      <div class="line">
+        <input class="button" type="button" id="button1" onclick="button1()" value="Ligada" />
+        <img class="lamp" id="lampada1" src="./lamp.svg" alt="lampada_ligada">
+      </div>
+    </div>
+    <div class="box">
+      <h1>Vetilador</h1>
+      <div class="line">
+        <input class="button" type="button" id="button2" onclick="button2()" value="Desligado" />
+        <img class="lamp" id="lampada2" src="./lamp2.svg" alt="lampada_ligada">
+      </div>
+      <input class="buttonState" type="button" id="buttonState" onclick="button3()" value="Status" />
+      <script>
+        verifyStatus();
+      </script>
+    </div>
+  </div>
+</body>
+</html>
