@@ -2,14 +2,17 @@ function button1(){
     const botao = document.getElementById('button1');
     const lamapada = document.getElementById('lampada1');
     const estado = botao.value;
-    localStorage.setItem("lampadaStatus","0");
-    console.log(estado)
+    var lampadaStatus = 0;
     if(estado === 'Ligada') {
         botao.value = "Desligada";
         lamapada.src = "./assets/images/lamp2.svg";
+        lampadaStatus = 0;
+        localStorage.setItem("lampadaStatus", lampadaStatus);
     } else if (estado === 'Desligada') {
         botao.value = "Ligada";
         lamapada.src = "./assets/images/lamp.svg"
+        lampadaStatus = 1;
+        localStorage.setItem("lampadaStatus", lampadaStatus);
     }
 }
 
@@ -20,15 +23,18 @@ function button2(){
     const lampada = document.getElementById('lampada2');
     const estado2 = botao.value;
     console.log(estado2)
-
+    var ventiladorStatus = 0;
     if(estado2 === 'Desligado') {
         botao.value = "Ligado";
         lampada.src = "./assets/images/lamp.svg";
+        ventiladorStatus = 1;
+        localStorage.setItem("ventiladorStatus", ventiladorStatus);
         verifyStatus();
     } else if (estado2 === 'Ligado') {
-        console.log(2)
         botao.value = "Desligado";
-        lampada.src = "./assets/images/lamp2.svg"
+        lampada.src = "./assets/images/lamp2.svg";
+        ventiladorStatus = 0;
+        localStorage.setItem("ventiladorStatus", ventiladorStatus);
         verifyStatus();
     }
 }
@@ -57,4 +63,9 @@ function verifyStatus() {
         botaoStatus.value = 'Desconectado';
         botaoStatus.style.background = "#B50D0D";
     }
+}
+
+function startLocalStorage(){
+    localStorage.setItem("lampadaStatus", 0);
+    localStorage.setItem("ventiladorStatus", 0);
 }

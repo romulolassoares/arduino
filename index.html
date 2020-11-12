@@ -8,13 +8,14 @@
   <title>Document</title>
 </head>
 <body>
+  
   <div class="container">
     <img class="logo" src="./assets/images/logo.svg" alt="logo">
     <div class="box">
       <h1>Lâmpada</h1>
       <div class="line">
-        <input class="button" type="button" id="button1" onclick="button1()" value="Ligada" />
-        <img class="lamp" id="lampada1" src="./assets/images/lamp.svg" alt="lampada_ligada">
+        <input class="button" type="button" id="button1" onclick="button1()" value="Desligada" />
+        <img class="lamp" id="lampada1" src="./assets/images/lamp2.svg" alt="lampada_ligada">
       </div>
     </div>
     <div class="box">
@@ -24,10 +25,11 @@
         <img class="lamp" id="lampada2" src="./assets/images/lamp2.svg" alt="lampada_ligada">
       </div>
       <input class="buttonState" type="button" id="buttonState" onclick="button3()" value="Status" />
-      <script>
-        verifyStatus();
-      </script>
     </div>
+    <script>
+      verifyStatus();
+      startLocalStorage();
+    </script>
   </div>
 </body>
 </html>
