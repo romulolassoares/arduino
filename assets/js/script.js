@@ -2,13 +2,14 @@ function button1(){
     const botao = document.getElementById('button1');
     const lamapada = document.getElementById('lampada1');
     const estado = botao.value;
+    localStorage.setItem("lampadaStatus","0");
     console.log(estado)
     if(estado === 'Ligada') {
         botao.value = "Desligada";
-        lamapada.src = "/assets/images/lamp2.svg";
+        lamapada.src = "./assets/images/lamp2.svg";
     } else if (estado === 'Desligada') {
         botao.value = "Ligada";
-        lamapada.src = "/assets/images/lamp.svg"
+        lamapada.src = "./assets/images/lamp.svg"
     }
 }
 
@@ -22,12 +23,12 @@ function button2(){
 
     if(estado2 === 'Desligado') {
         botao.value = "Ligado";
-        lampada.src = "/assets/images/lamp.svg";
+        lampada.src = "./assets/images/lamp.svg";
         verifyStatus();
     } else if (estado2 === 'Ligado') {
         console.log(2)
         botao.value = "Desligado";
-        lampada.src = "/assets/images/lamp2.svg"
+        lampada.src = "./assets/images/lamp2.svg"
         verifyStatus();
     }
 }
@@ -38,7 +39,7 @@ function button3(){
     const botaoStatus = document.getElementById('buttonState');
 
     if(botaoStatus.value === 'Conectado') {
-        window.location.href = "/pages/ventiladorStatus.html"
+        window.location.href = "./pages/ventiladorStatus.html"
     } else if (botaoStatus.value === 'Desconectado') {
         alert('Desconectado do ventilador! Deseja Logar');
     }
