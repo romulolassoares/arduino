@@ -33,7 +33,15 @@ function button2(){
 }
 
 function button3(){
-    
+    const botaoVentilador = document.getElementById('button2');
+    const lampada = document.getElementById('lampada2');
+    const botaoStatus = document.getElementById('buttonState');
+
+    if(botaoStatus.value === 'Conectado') {
+        window.location.href = "./ventiladorStatus.html"
+    } else if (botaoStatus.value === 'Desconectado') {
+        alert('Desconectado do ventilador! Deseja Logar');
+    }
 }
 
 function verifyStatus() {
