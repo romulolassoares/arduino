@@ -12,31 +12,110 @@ body {
   background: #070E51;
 }
 
-h1 {
+.container {
+  position: relative;  
+  width: 354px;
+  height: 600px;
   display: block;
-  margin: 0 auto;
-  margin-top: 150px;
-  align-content: center;
-  text-align: center;
-  font-family: Fira Code;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 80px;
-  color: #FAF4F4;
+  margin: 25px auto;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 11px rgba(13, 13, 13, 0.25);
+  border-radius: 15px;
 }
 
- @media screen and (max-width: 600px) {
-  h1 {
-    font-size: 50px;
-  }
- }
- @media screen and (max-width: 400px) {
-  h1 {
-    font-size: 30px;
-  }
- }
- @media screen and (max-width: 250px) {
-  h1 {
-    font-size: 15px;
-  }
- }
+.container .logo {
+  display: block;
+  margin: 30px auto;
+  width: 94px;
+  height: 60px;
+}
+
+.box {
+  display: block;
+  margin: 0 auto;
+  width: 280px;
+  height: 350px;
+  border: 3px solid black;
+  border-radius: 25px;
+}
+
+.box h1 {
+  font-family: Archivo;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.box hr {
+  display: block;
+  margin: 0 auto;
+  width: 180px;
+  border: 1px solid black;
+}
+
+.box .line {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.line:nth-child(n+2) {
+  margin-top: 20px;
+}
+
+.box .line h3 {
+  font-family: Fira Code;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+.box .line p {
+  font-family: Fira Code;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  color:#070E51;
+}
+
+.container .btn1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: left;
+}
+
+.container .btn1 button  {
+  width: 50px;
+  height: 50px;
+  background: #070E51;
+  font-family: Fira Code;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center ;
+  color: #fff;
+  border-radius: 50px;
+  margin-left: 50px;
+}
+.container .btn2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: right;
+}
+
+.container .btn2 button {
+  width: 50px;
+  height: 50px;
+  background: #070E51;
+  font-family: Fira Code;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center ;
+  color: #fff;
+  border-radius: 50px;
+  margin-right: 50px;
+}

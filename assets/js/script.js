@@ -69,3 +69,26 @@ function startLocalStorage(){
     localStorage.setItem("lampadaStatus", 0);
     localStorage.setItem("ventiladorStatus", 0);
 }
+
+function aumentaVel(){
+    var val = document.getElementById("valor").textContent
+
+    if ( Number(val) < 5) {
+        val = Number(val)+1;
+        document.getElementById("valor").textContent = val;
+    } else {
+        alert("Velocidade Maxima");
+    }
+    
+}
+
+function diminuiVel() {
+    var val = document.getElementById("valor").textContent
+    if ( Number(val) > 0) {   
+        val = Number(val)-1;
+        document.getElementById("valor").textContent = val;
+    } else {
+        alert("Velocidade Maxima");
+    }
+
+}
