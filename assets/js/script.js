@@ -73,9 +73,11 @@ function verifyStatus2() {
     var statusVent = localStorage.getItem("ventiladorStatus")
 
     if(Number(statusVent) === 1) {
+        document.getElementById("ventStatus").textContent = "Ligado"
         botaoStatus.value = 'Conectado';
         botaoStatus.style.background = "#008D5A";
     } else if (Number(statusVent) === 0) {
+        document.getElementById("ventStatus").textContent = "Deligado"
         botaoStatus.value = 'Desconectado';
         botaoStatus.style.background = "#B50D0D";
     }
@@ -120,4 +122,8 @@ function diminuiVel() {
         verifyStatus2();
     }
 
+}
+
+function surprise(){
+    alert("É uma supresa. Dica: Ideias loca de Romin Rei")
 }

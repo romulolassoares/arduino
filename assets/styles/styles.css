@@ -94,3 +94,22 @@ body {
   font-size: 18px;
   color: #FAF4F4;
 }
+
+.box .buttonState:hover {
+  opacity: 80%;
+}
+
+.container .site {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  background: #c368ec;
+  border-radius: 25px;
+  width: 270px;
+  height: 50px;
+  color: #fff;
+  font-family: Fira Code;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+}
