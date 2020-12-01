@@ -71,6 +71,11 @@ body {
   font-weight: 500;
   font-size: 18px;
   color: #FAF4F4;
+  cursor: pointer;
+}
+
+.box .line .button:hover{
+  background: #222c8b;
 }
 
 .box .line .lamp {

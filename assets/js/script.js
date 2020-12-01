@@ -8,17 +8,17 @@ function button1(){
         lamapada.src = "./assets/images/lamp2.svg";
         lampadaStatus = 0;
         localStorage.setItem("lampadaStatus", lampadaStatus);
+        window.location.href = "/?desliga";
     } else if (estado === 'Desligada') {
         botao.value = "Ligada";
         lamapada.src = "./assets/images/lamp.svg"
         lampadaStatus = 1;
         localStorage.setItem("lampadaStatus", lampadaStatus);
+        window.location.href = "/?liga";
     }
 }
 
 function button2(){
-   // window.location.href = "./?lamp";
-
     const botao = document.getElementById('button2');
     const lampada = document.getElementById('lampada2');
     const estado2 = botao.value;
@@ -84,8 +84,13 @@ function verifyStatus2() {
 }
 
 function startLocalStorage(){
-    localStorage.setItem("lampadaStatus", 0);
-    localStorage.setItem("ventiladorStatus", 0);
+
+    if(localStorage.getItem("lampadaStatus") === null){
+        localStorage.setItem("lampadaStatus", 0);
+    }
+    if(localStorage.getItem("ventiladorStatus") === null){
+        localStorage.setItem("ventiladorStatus", 0);
+    }
 }
 
 function aumentaVel(){
@@ -126,4 +131,14 @@ function diminuiVel() {
 
 function surprise(){
     alert("É uma supresa. Dica: Ideias loca de Romin Rei")
+}
+
+function verificaLampada(){
+    var statusVent = localStorage.getItem("lampadaStatus")
+    const botao = document.getElementById('button1');
+    const lamapada = document.getElementById('lampada1');
+    if(statusVent === "1"){
+        botao.value = "Ligada";
+        lamapada.src = "./assets/images/lamp.svg";
+    }
 }
