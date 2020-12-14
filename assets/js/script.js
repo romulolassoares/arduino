@@ -1,4 +1,15 @@
-function button1(){
+function startLocalStorage(){
+
+    if(localStorage.getItem("lampadaStatus") === null){
+        localStorage.setItem("lampadaStatus", 0);
+    }
+    if(localStorage.getItem("ventiladorStatus") === null){
+        localStorage.setItem("ventiladorStatus", 0);
+    }
+}
+//Lampâda ---------------------------
+
+function buttonLamp(){
     const botao = document.getElementById('button1');
     const lamapada = document.getElementById('lampada1');
     const estado = botao.value;
@@ -18,7 +29,12 @@ function button1(){
     }
 }
 
-function button2(){
+//-----------------------------------
+
+
+//Ventilador ---------------------------
+
+function buttonFan(){
     const botao = document.getElementById('button2');
     const lampada = document.getElementById('lampada2');
     const estado2 = botao.value;
@@ -29,67 +45,23 @@ function button2(){
         lampada.src = "./assets/images/lamp.svg";
         ventiladorStatus = 1;
         localStorage.setItem("ventiladorStatus", ventiladorStatus);
-        verifyStatus();
+        verifyFanStatus();
     } else if (estado2 === 'Ligado') {
         botao.value = "Desligado";
         lampada.src = "./assets/images/lamp2.svg";
         ventiladorStatus = 0;
         localStorage.setItem("ventiladorStatus", ventiladorStatus);
-        verifyStatus();
+        verifyFanStatus();
     }
 }
 
-function button3(){
-    const botaoVentilador = document.getElementById('button2');
-    const lampada = document.getElementById('lampada2');
+function buttonFanPlus(){
     const botaoStatus = document.getElementById('buttonState');
 
     if(botaoStatus.value === 'Conectado') {
         window.location.href = "./pages/ventiladorStatus.html"
     } else if (botaoStatus.value === 'Desconectado') {
         alert('Desconectado do ventilador! Deseja Logar');
-    }
-}
-
-function verifyStatus() {
-    const botaoVentilador = document.getElementById('button2');
-    const lampada = document.getElementById('lampada2');
-    const botaoStatus = document.getElementById('buttonState');
-
-    var statusVent = localStorage.getItem("ventiladorStatus")
-
-    if(botaoVentilador.value === 'Ligado') {
-        botaoStatus.value = 'Conectado';
-        botaoStatus.style.background = "#008D5A";
-    } else if (botaoVentilador.value === 'Desligado') {
-        botaoStatus.value = 'Desconectado';
-        botaoStatus.style.background = "#B50D0D";
-    }
-}
-
-function verifyStatus2() {
-    const botaoStatus = document.getElementById('buttonState');
-
-    var statusVent = localStorage.getItem("ventiladorStatus")
-
-    if(Number(statusVent) === 1) {
-        document.getElementById("ventStatus").textContent = "Ligado"
-        botaoStatus.value = 'Conectado';
-        botaoStatus.style.background = "#008D5A";
-    } else if (Number(statusVent) === 0) {
-        document.getElementById("ventStatus").textContent = "Deligado"
-        botaoStatus.value = 'Desconectado';
-        botaoStatus.style.background = "#B50D0D";
-    }
-}
-
-function startLocalStorage(){
-
-    if(localStorage.getItem("lampadaStatus") === null){
-        localStorage.setItem("lampadaStatus", 0);
-    }
-    if(localStorage.getItem("ventiladorStatus") === null){
-        localStorage.setItem("ventiladorStatus", 0);
     }
 }
 
@@ -106,39 +78,50 @@ function aumentaVel(){
         document.getElementById("valor").textContent = val;
     } else {
         alert("Velocidade Maxima");
-    }
-
-    
-    
+    }  
 }
 
-function diminuiVel() {
-    var val = document.getElementById("valor").textContent
-    
-    if ( Number(val) > 0) {   
-        val = Number(val)-1;
-        document.getElementById("valor").textContent = val;
-    } else {
-        alert("Velocidade Maxima");
-    }
+//-----------------------------------
 
-    if (Number(val) == 0) {
-        localStorage.setItem("ventiladorStatus", 0)
-        verifyStatus2();
-    }
+//Verificadores ---------------------------
 
+function verifyFanStatus() {
+    const botaoStatus = document.getElementById('buttonState');
+    var statusVent = localStorage.getItem("ventiladorStatus")
+
+    const botao = document.getElementById('button2');
+    const lampada = document.getElementById('lampada2');
+    const estado2 = botao.value;
+
+    if(statusVent === '1') {
+        botaoStatus.value = 'Conectado';
+        botaoStatus.style.background = "#008D5A";
+
+        botao.value = "Ligado";
+        lampada.src = "./assets/images/lamp.svg";
+    } else if (statusVent === '0') {
+        botaoStatus.value = 'Desconectado';
+        botaoStatus.style.background = "#B50D0D";
+
+        botao.value = "Desligado";
+        lampada.src = "./assets/images/lamp2.svg";
+    }
 }
+
+function verifyLampStatus(){
+    var statusVent = localStorage.getItem("lampadaStatus")
+    const botao = document.getElementById('button1');
+    const lamapada = document.getElementById('lampada1');
+    if(statusVent === "1"){  
+        botao.value = "Ligada";
+        lamapada.src = "./assets/images/lamp.svg";
+    }
+}
+
+//-----------------------------------
+
 
 function surprise(){
     alert("É uma supresa. Dica: Ideias loca de Romin Rei")
 }
 
-function verificaLampada(){
-    var statusVent = localStorage.getItem("lampadaStatus")
-    const botao = document.getElementById('button1');
-    const lamapada = document.getElementById('lampada1');
-    if(statusVent === "1"){
-        botao.value = "Ligada";
-        lamapada.src = "./assets/images/lamp.svg";
-    }
-}

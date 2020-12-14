@@ -14,26 +14,25 @@
     <div class="box">
       <h1>Lâmpada</h1>
       <div class="line">
-        <input class="button" type="button" id="button1" onclick="button1()" value="Desligada" />
+        <input class="button" type="button" id="button1" onclick="buttonLamp()" value="Desligada" />
         <img class="lamp" id="lampada1" src="./assets/images/lamp2.svg" alt="lampada_ligada">
       </div>
     </div>
     <div class="box">
       <h1>Vetilador</h1>
       <div class="line">
-        <input class="button" type="button" id="button2" onclick="button2()" value="Desligado" disabled/>
+        <input class="button" type="button" id="button2" onclick="buttonFan()" value="Desligado" disabled/>
         <img class="lamp" id="lampada2" src="./assets/images/lamp2.svg" alt="lampada_ligada">
       </div>
-      <input class="buttonState" type="button" id="buttonState" onclick="button3()" value="Status" disabled/>
+      <input class="buttonState" type="button" id="buttonState" onclick="buttonFanPlus()" value="Status" disabled/>
     </div>
 
     <button class="site" onclick="surprise()" >It's a surprise</button>
 
     <script>
-      
-      verifyStatus();
+      verifyFanStatus();
       startLocalStorage();
-      verificaLampada();
+      verifyLampStatus();
     </script>
   </div>
   

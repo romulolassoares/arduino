@@ -26,6 +26,8 @@ body {
 .container .logo {
   display: block;
   margin: 30px auto;
+  max-width:100px;
+  padding-top: 10px;
 }
 
 .box {
