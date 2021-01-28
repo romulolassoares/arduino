@@ -49,7 +49,7 @@ void loop()
           //Controle do rele1
           Serial.println(readString);
           //Liga o Rele 1
-          if (readString.indexOf("?ligar") > 0)
+          if (readString.indexOf("/arduino/arduino/?ligar") > 0)
           {
             digitalWrite(pino_rele1, LOW);
             Serial.println("Light ON");
@@ -58,7 +58,7 @@ void loop()
           else
           {
             //Desliga o Rele 1
-            if (readString.indexOf("?desligar") > 0)
+            if (readString.indexOf("/arduino/arduino/?desligar") > 0)
             {
               digitalWrite(pino_rele1, HIGH);
               Serial.println("Light OFF");
