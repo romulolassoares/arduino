@@ -70,6 +70,7 @@ void loop()
           client.println("HTTP/1.1 200 OK");
           client.println("Content-Type: text/html");
           client.println();
+<<<<<<< HEAD
           client.println("<head>");
           client.println("<head>");
           client.println("<meta charset="UTF-8">");
@@ -80,6 +81,20 @@ void loop()
           client.println("<title>Bebe1</title>");
           client.println("</head>");
           client.println("<body>");
+=======
+          client.println(<html>);
+          client.println(<head>);
+          client.println(<meta charset="UTF-8">);
+          client.println(<meta name="viewport" content="width=device-width, initial-scale=1.0">);
+          client.println(<script type="text/javascript" src="./assets/js/script.js"></script>);
+          client.println(<link rel="stylesheet" href="./assets/styles/styles.css">);
+          client.println(<link rel="shortcut icon" type="image/x-icon" href="./assets/images/logo.svg">);
+          client.println(<title>);
+          client.println(Bebe1);
+          client.println(</title>);
+          client.println(</head>);
+          client.println(<body>);
+>>>>>>> 3d338170450c6260e286615067952b749747b755
           client.println();
           client.println("<div class="container">");
           client.println("<img class="logo" src="./assets/images/logo.svg" alt="logo">");
