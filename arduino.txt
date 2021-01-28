@@ -95,7 +95,8 @@ void loop()
           client.println(</div>);
           client.println(<input class="buttonState" type="button" id="buttonState" onclick="button3()" value="Status" disabled/>);
           client.println(</div>);
-          client.println(<button class="site" onclick="surprise()" >It's a surprise</button>);
+          client.println(<button class="site" 
+          client.println(onclick="surprise()" >It's a surprise</button>);
           client.println(<script>);
           client.println(verifyStatus(););
           client.println(startLocalStorage(););
