@@ -90,7 +90,7 @@ void loop()
           client.println("<img class='lamp' id='lampada1' src='https://romulolassoares.github.io/arduino/assets/images/lamp2.svg' alt='lampada_ligada'>");
           client.println("</div>");
           client.println("</div>");
-          client.println"(<script>");
+          client.println("<script>");
           client.println("verifyFanStatus();");
           client.println("startLocalStorage();");
           client.println("verifyLampStatus();");
