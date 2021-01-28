@@ -14,14 +14,14 @@ function buttonLamp(){
     const lamapada = document.getElementById('lampada1');
     const estado = botao.value;
     var lampadaStatus = 0;
-    if(estado === 'Ligada') {
-        botao.value = "Desligada";
+    if(estado === 'Desligar') {
+        botao.value = "Ligar";
         lamapada.src = "https://romulolassoares.github.io/arduino/assets/images/lamp2.svg";
         lampadaStatus = 0;
         localStorage.setItem("lampadaStatus", lampadaStatus);
         window.location.href = "/?desliga";
-    } else if (estado === 'Desligada') {
-        botao.value = "Ligada";
+    } else if (estado === 'Ligar') {
+        botao.value = "Desligar";
         lamapada.src = "https://romulolassoares.github.io/arduino/assets/images/lamp.svg"
         lampadaStatus = 1;
         localStorage.setItem("lampadaStatus", lampadaStatus);
@@ -42,13 +42,13 @@ function buttonFan(){
     var ventiladorStatus = 0;
     if(estado2 === 'Desligado') {
         botao.value = "Ligado";
-        lampada.src = "https://romulolassoares.github.io/arduino/assets/images/lamp.svg";
+        lampada.src = "./assets/images/lamp.svg";
         ventiladorStatus = 1;
         localStorage.setItem("ventiladorStatus", ventiladorStatus);
         verifyFanStatus();
     } else if (estado2 === 'Ligado') {
         botao.value = "Desligado";
-        lampada.src = "https://romulolassoares.github.io/arduino/assets/images/lamp2.svg";
+        lampada.src = "./assets/images/lamp2.svg";
         ventiladorStatus = 0;
         localStorage.setItem("ventiladorStatus", ventiladorStatus);
         verifyFanStatus();
@@ -98,13 +98,13 @@ function verifyFanStatus() {
         botaoStatus.style.background = "#008D5A";
 
         botao.value = "Ligado";
-        lampada.src = "https://romulolassoares.github.io/arduino/assets/images/lamp.svg";
+        lampada.src = "./assets/images/lamp.svg";
     } else if (statusVent === '0') {
         botaoStatus.value = 'Desconectado';
         botaoStatus.style.background = "#B50D0D";
 
         botao.value = "Desligado";
-        lampada.src = "https://romulolassoares.github.io/arduino/assets/images/lamp2.svg";
+        lampada.src = "./assets/images/lamp2.svg";
     }
 }
 
@@ -114,7 +114,7 @@ function verifyLampStatus(){
     const lamapada = document.getElementById('lampada1');
     if(statusVent === "1"){  
         botao.value = "Ligada";
-        lamapada.src = "https://romulolassoares.github.io/arduino/assets/images/lamp.svg";
+        lamapada.src = "./assets/images/lamp.svg";
     }
 }
 
