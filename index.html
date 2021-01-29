@@ -15,14 +15,14 @@
     <div class="box">
       <h1>Lâmpada</h1>
       <div class="line">
-        <input class="button" type="button" id="button1" onclick="buttonLamp()" value="Desligada" />
+        <input class="button" type="button" id="button" onclick="buttonLamp()" value="Ligar" />
         <img class="lamp" id="lampada1" src="./assets/images/lamp2.svg" alt="lampada_ligada">
       </div>
     </div>
-    <script>
-      startLocalStorage();
-    </script>
   </div>
-  
+  <script>
+    startLocalStorage();
+    verifyLampStatus();
+  </script>
 </body>
 </html>

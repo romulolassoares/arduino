@@ -86,12 +86,11 @@ void loop()
           client.println("<div class='box'>");
           client.println("<h1>Lâmpada</h1>");
           client.println("<div class='line'>");
-          client.println("<input class='button' type='button' id='button1' onclick='buttonLamp()' value='Desligada' />");
+          client.println("<input class='button' type='button' id='button' onclick='buttonLamp()' value='Ligar' />");
           client.println("<img class='lamp' id='lampada1' src='https://romulolassoares.github.io/arduino/assets/images/lamp2.svg' alt='lampada_ligada'>");
           client.println("</div>");
           client.println("</div>");
           client.println("<script>");
-          client.println("verifyFanStatus();");
           client.println("startLocalStorage();");
           client.println("verifyLampStatus();");
           client.println("</script>");
