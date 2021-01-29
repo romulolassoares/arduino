@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,13 +13,24 @@
   <div class="container">
     <img class="logo" src="./assets/images/logo.svg" alt="logo">
     <div class="box">
+      <h1>Lâmpada</h1>
       <div class="line">
         <input class="button" type="button" id="button1" onclick="buttonLamp()" value="Desligada" />
         <img class="lamp" id="lampada1" src="./assets/images/lamp2.svg" alt="lampada_ligada">
       </div>
     </div>
+    <div class="box">
+      <h1>Vetilador</h1>
+      <div class="line">
+        <input class="button" type="button" id="button2" onclick="buttonFan()" value="Desligado" disabled/>
+        <img class="lamp" id="lampada2" src="./assets/images/lamp2.svg" alt="lampada_ligada">
+      </div>
+      <input class="buttonState" type="button" id="buttonState" onclick="buttonFanPlus()" value="Status" disabled/>
+    </div>
+
+    <button class="site" onclick="surprise()" >It's a surprise</button>
+
     <script>
-      verifyFanStatus();
       startLocalStorage();
       verifyLampStatus();
     </script>
