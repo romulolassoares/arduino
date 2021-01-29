@@ -3,9 +3,6 @@ function startLocalStorage(){
     if(localStorage.getItem("lampadaStatus") === null){
         localStorage.setItem("lampadaStatus", 0);
     }
-    if(localStorage.getItem("ventiladorStatus") === null){
-        localStorage.setItem("ventiladorStatus", 0);
-    }
 }
 
 function buttonLamp(){
