@@ -15,13 +15,13 @@ function buttonLamp(){
         lamapada.src = "https://romulolassoares.github.io/arduino/assets/images/lamp2.svg";
         lampadaStatus = 0;
         localStorage.setItem("lampadaStatus", lampadaStatus);
-        window.location.href = "/?desliga";
+        window.location.href = "arduino/?desliga";
     } else if (estado === 'Ligar') {
         botao.value = "Desligar";
         lamapada.src = "https://romulolassoares.github.io/arduino/assets/images/lamp.svg"
         lampadaStatus = 1;
         localStorage.setItem("lampadaStatus", lampadaStatus);
-        window.location.href = "/?liga";
+        window.location.href = "arduino/?liga";
     }
     verifyLampStatus()
 }
